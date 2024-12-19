@@ -12,15 +12,18 @@ export const useReportStore = defineStore("report", {
       this.reports = await fetchReports();
     },
     getFilteredReports() {
-      return this.reports.filter(
-        (report) =>
-          report.transactionType
-            .toLowerCase()
-            .includes(this.filterType.toLowerCase()) &&
+      return this.reports.filter((report) => {
+        const matchesType =
+          this.filterType === "" ||
+          this.filterType.toLowerCase() === "all" ||
+          report.transactionType.toLowerCase() === this.filterType.toLowerCase();
+        const matchesSearch =
+          this.searchQuery === "" ||
           report.accountHolder
             .toLowerCase()
-            .includes(this.searchQuery.toLowerCase())
-      );
+            .includes(this.searchQuery.toLowerCase());
+        return matchesType && matchesSearch;
+      });
     },
   },
 });
