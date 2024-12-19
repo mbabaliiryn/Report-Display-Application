@@ -48,8 +48,8 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 ## 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/financial-reports-app.git
-cd financial-reports-app
+git clone https://github.com/your-username/Report-Display-Application.git
+cd Report-Display-Application
 
 ```
 ## 2. Install Dependencies
