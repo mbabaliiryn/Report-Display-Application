@@ -8,6 +8,19 @@
         Financial Reports
       </v-card-title>
 
+       <!-- Export Buttons -->
+       <v-row class="mt-4" justify="center">
+        <v-btn color="primary" @click="exportToCSV" class="mr-2">
+          Export to CSV
+        </v-btn>
+        <v-btn color="secondary" @click="exportToPDF" class="mr-2">
+          Export to PDF
+        </v-btn>
+        <v-btn color="success" @click="exportToExcel">
+          Export to Excel
+        </v-btn>
+      </v-row>
+
       <!-- Search and Filter Section -->
       <v-row class="mb-4">
         <v-col cols="12" sm="6" md="4">
@@ -49,18 +62,7 @@
         </template>
       </v-data-table>
 
-      <!-- Export Buttons -->
-      <v-row class="mt-4" justify="center">
-        <v-btn color="primary" @click="exportToCSV" class="mr-2">
-          Export to CSV
-        </v-btn>
-        <v-btn color="secondary" @click="exportToPDF" class="mr-2">
-          Export to PDF
-        </v-btn>
-        <v-btn color="success" @click="exportToExcel">
-          Export to Excel
-        </v-btn>
-      </v-row>
+     
     </v-card>
   </v-container>
 </template>
